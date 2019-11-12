@@ -39,7 +39,7 @@ public class QuestionRestController {
         questionService.delete(questionId, pollId);
     }
 
-    @PutMapping(value = "/question/{questionId}/poll/{pollId}/")
+    @PutMapping(value = "/question/{questionId}/poll/{pollId}")
     @ApiOperation(value = "Обновить вопрос")
     public ResponseEntity<Question> update(@RequestBody Question question, @PathVariable("questionId") int questionId, @PathVariable("pollId") int pollId){
         assureIdConsistent(question, questionId);

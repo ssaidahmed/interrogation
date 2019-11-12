@@ -91,7 +91,7 @@ public class PollRestControllerTest {
 //    }
 
     @Test
-    public void save_book_OK() throws Exception {
+    public void save_poll_OK() throws Exception {
 
         Poll newPoll = new Poll("Work", LocalDate.of(2020, 2, 2), LocalDate.of(2020, 2, 2), false);
 

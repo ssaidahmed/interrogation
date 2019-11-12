@@ -29,10 +29,8 @@ public class Question extends BaseEntity {
     public Question() {
     }
 
-    public Question(@NotNull Poll poll, @NotNull String questionText, @NotNull String displayOrder) {
-        this.poll = poll;
-        this.questionText = questionText;
-        this.display = displayOrder;
+    public Question(@NotNull String questionText, @NotNull String displayOrder) {
+        this(null, questionText, displayOrder);
     }
 
     public Question(Integer id, @NotNull String questionText, @NotNull String display) {
