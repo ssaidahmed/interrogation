@@ -36,7 +36,7 @@ public class Poll extends BaseEntity{
     @NotNull
     private boolean activity;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "poll")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "poll", cascade = CascadeType.ALL)
     @JsonManagedReference
    // @OrderBy("display ASC")
     private List<Question> questions;

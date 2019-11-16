@@ -32,7 +32,6 @@ import static org.mockito.Mockito.*;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-@ActiveProfiles("test")
 public class QuestionRestControllerTest {
 
     private static final ObjectMapper om = new ObjectMapper();
