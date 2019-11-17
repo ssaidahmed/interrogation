@@ -15,7 +15,12 @@ public class Question extends BaseEntity {
 
 
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {
+            CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH
+    })
     @JoinColumn(name = "poll_id")
     @JsonBackReference
     private Poll poll;
